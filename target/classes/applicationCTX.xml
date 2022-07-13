@@ -11,6 +11,26 @@
 		<aop:aspect id="logger" ref="logAop">
 			<aop:pointcut expression="within(com.gyojincompany.aoptest.*)" id="publicM"/>
 			<aop:around pointcut-ref="publicM" method="loggerAop"/>
+		</aop:aspect>
+		
+		<aop:aspect id="logger" ref="logAop">
+			<aop:pointcut expression="within(com.gyojincompany.aoptest.*)" id="publicM"/>
+			<aop:before pointcut-ref="publicM" method="beforeAdvice"/>
+		</aop:aspect>
+		
+		<aop:aspect id="logger" ref="logAop">
+			<aop:pointcut expression="within(com.gyojincompany.aoptest.*)" id="publicM"/>
+			<aop:after pointcut-ref="publicM" method="afterAdvice"/>
+		</aop:aspect>
+		
+		<aop:aspect id="logger" ref="logAop">
+			<aop:pointcut expression="within(com.gyojincompany.aoptest.*)" id="publicM"/>
+			<aop:after-returning pointcut-ref="publicM" method="afterReturnAdvice"/>
+		</aop:aspect>
+		
+		<aop:aspect id="logger" ref="logAop">
+			<aop:pointcut expression="within(com.gyojincompany.aoptest.*)" id="publicM"/>
+			<aop:after-throwing pointcut-ref="publicM" method="afterThrowingAdvice"/>
 		</aop:aspect>	
 	</aop:config>
 

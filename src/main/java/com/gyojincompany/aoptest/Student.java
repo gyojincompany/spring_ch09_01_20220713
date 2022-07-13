@@ -12,6 +12,12 @@ public class Student {
 		System.out.println("나이 : " + getAge());
 		System.out.println("학년 : " + getGradeNum());
 		System.out.println("반 : " + getClassNum());
+		
+		try {
+			System.out.println(10/0);//강제에러발생
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 	
 	public String getName() {
